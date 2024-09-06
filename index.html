@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogging my Thoughts</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #1e1e1e;
+            --text-color: #d4d4d4;
+            --accent-color: #569cd6;
+            --secondary-color: #4ec9b0;
+            --tertiary-color: #ce9178;
+        }
+        body {
+            font-family: 'Fira Code', monospace;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+        .navbar {
+            background-color: #252526 !important;
+        }
+        .blog-title, .nav-link, .btn-link {
+            color: var(--accent-color) !important;
+        }
+        .blog-posts {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+        .blog-post {
+            display: flex;
+            flex-direction: column;
+            padding: 1.5rem;
+            background-color: #252526;
+            border-left: 3px solid var(--secondary-color);
+            border-radius: 0.25rem;
+        }
+        .blog-post h2 {
+            color: var(--secondary-color);
+        }
+        .archive-year {
+            cursor: pointer;
+            color: var(--tertiary-color);
+        }
+        .archive-months {
+            display: none;
+            padding-left: 20px;
+        }
+        .archive-months a {
+            color: var(--text-color);
+            text-decoration: none;
+        }
+        .archive-months a:hover {
+            color: var(--accent-color);
+        }
+        @media (max-width: 768px) {
+            .blog-sidebar {
+                margin-top: 2rem;
+            }
+        }
+        pre {
+            background-color: #1e1e1e;
+            border: 1px solid #333;
+            border-radius: 4px;
+            padding: 1rem;
+            overflow-x: auto;
+        }
+        code {
+            font-family: 'Fira Code', monospace;
+            color: var(--accent-color);
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand blog-title" href="#">Blogging my Thoughts</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-lg-9">
+                <div class="blog-posts">
+                    <article class="blog-post">
+                        <h2>शायरी</h2>
+                        <p>Saturday, June 30, 2018</p>
+                        <div style="text-align: left; font-size: 20px">
+                            समझाता हूँ मैं दिल को, के दर्द तो आता जाता है.<br>                     
+                            दिल ने कहा, बात सही है जनाब , पर जाते जाते वो दिल पर निशान बना जाता है। <br>
+                            -------------------------------------
+                            <br>
+                            वक़्त की मरहम है बड़ी लाजवाब,<br>                 
+                            मानो पानी में&nbsp; दर्दों का नमक गल गया।<br>
+                            -------------------------------------
+                            <br>
+                            वक़्त रुकता नहीं जनाब किसी के लिए,<br>
+                            वो तेरे साथ है या नहीं, वक़्त के इस्तेमाल पर है.<br>
+                            -------------------------------------
+                            <br>
+                            शमा ए मोहब्बत जलती रहे हमेशा,<br>
+                            ना हो मज़हब के नाम पर एक और गुनाह।
+                        </div>
+                        <a href="/shayari/shayari.html" class="btn btn-link p-0 mt-auto">Read more</a>
+                    </article>
+
+                    <article class="blog-post">
+                        <h2>Connected World - Connected Responsibilites</h2>
+                        <p >Friday, June 29, 2023</p>
+                        <div style="text-align: left; font-size: 20px">
+                        As the world becomes more and more connected, there are hundred more reasons for world cooperation. A prosperous country cannot stay prosperous until it helps out its neighbors. A healthy country cannot stay healthy till countries around that country remain healthy as well.<br>
+                        <a href="/opinion/connected.html" class="btn btn-link p-0 mt-auto">Read more</a>
+                        </div>
+                    </article>
+                    <article class="blog-post">
+                        <h2>Dynamic Copyright Year EJS HTML for express</h2>
+                        <p >Sunday, January 08, 2017</p>
+                        <p style="text-align: left; font-size: 20px">To make the year dynamically added in the copyright notice in express ejs HTML template, use the below:</p>
+                        <pre style="text-align: left; font-size: 20px"><code>©&nbsp;2016-<%= new Date().getFullYear() %></code></pre>
+                        <a href="#" class="btn btn-link p-0 mt-auto">Read more</a>
+                    </article>
+                    <article class="blog-post">
+                        <h2>MySQL Sandbox - Using MariaDB alongside MySQL</h2>
+                        <p >Monday, December 19, 2016</p>
+                        <div style="text-align: left; font-size: 20px">
+                        There will be times when you need to test MySQL when you already have MariaDB installed. You cannot do clean install of MySQL without doing a lot of changes to conf files if you want to install both together.<br>
+                        <br>
+                        Instead you can use <b>MySQL Sandbox.</b> It will get you up and running for the mysql server version of your choice without lot of hassles. Below is the link.<br>
+                        <br>
+                        http://mysqlsandbox.net/<br>
+                        https://github.com/datacharmer/mysql-sandbox<br>
+                        <br>
+                        It works just fine on Ubuntu 16.04 and reduces the hassles of doing anything with the already installed MariaDB. Some points to be noted.<br>
+                        <br>
+                        1) You need to download the tar.gz file of Mysql and not the rpm bundle.<br>
+                        <br>
+                        Example: mysql-5.x.x-linux-x86_64-xxx.tar.gz<br>
+                        <br>
+                        2) Make the sandbox permanent so that you don't loose data when you hit the command "clear" by mistake in your sandbox. (see the docs)<br>
+                        <br>
+                        3) When the server is started and you want to access it, you need to specify the Host ip as 127.0.0.1 because default localhost will not work.<br>
+                        <br>
+                        <pre style="text-align: left; font-size: 20px"><code>mysql -u "username" -P "port number" --host=127.0.0.1 -p</code></pre>
+                        
+                        <a href="#" class="btn btn-link p-0 mt-auto">Read more</a>
+                        </div>
+                    </article>
+                    <article class="blog-post">
+                        <h2>No Public Telephones</h2>
+                        <p >Tuesday, May 19, 2015</p>
+                        <div style="text-align: left; font-size: 20px">
+                        With the onset of cellphones across India, the public telephones i.e. the STD booths and the one rupee coin call boxes are disappearing very fast. There will be a day in the future very soon when there will be none. Have you ever wondered what will be the impact if there are not public telephones?<br>
+                        <br>
+                        The NGO's who work for child abuse and women trafficking say that there is significant drop in number of calls to police or NGO's regarding the reporting of these incidents. Reason: All the victims are without any phone. And because there is shortage of public telephones and victims don't have access to cellphones, they are not able to contact anyone who can help them.<br>
+                        <br>
+                        Take the case of very poor. They cannot afford a cellphone. If they have medical emergency and if they need an ambulance, how will they call?<br>
+                        <br>
+                        Finally take our own case. Think of a scenario when you are travelling. You lost your phone. You remember the number for your parents and two of your friends. You would like to contact them. But there is no public telephone. You approach people around you who has cellphones. They may directly reject your request to make one phone call. Reason: nowadays, the people are afraid that some stranger, who might be a criminal, might use your phone to contact his criminal friend. If police catch these people and they find your number in the call list, the police will first arrest you and you will have to prove yourself innocent. And you know how the police will behave until you are proven innocent.<br>
+                        <br>
+                        Is there a solution to this problem? Not sure. What is the incentive in having one rupee box phones in your shop, when you will have to monitor the persons who are making calls leaving all your work? Reason: All criminals use these phones because they cannot be tracked.<br>
+                        <br>
+                        So, don't lose your phone. If you lose your phone, pray that you have a public telephone nearby or there is a good person near you who trusts you and lets you make one call to your loved ones.<br>
+                        <br>
+                        <a href="#" class="btn btn-link p-0 mt-auto">Read more</a>
+                        </div>
+                    </article>
+                    <article class="blog-post">
+                        <h2>Present Agricultural Crisis in India</h2>
+                        <p >Sunday, May 3, 2015</p>
+                        <div style="text-align: left; font-size: 20px">
+                        With the confirmation that there is going to be less than expected harvest from most of the states either because of unseasoned rains or no rains, we have a crisis looming over our heads. Around 70% of farmers in India do cultivation on leased land. So, the owner is expected to get his share whether the crop comes or not.<div>
+                        &nbsp; &nbsp; &nbsp; &nbsp;Failure of a crop devastates the farmer and his inability to pay the debts breaks him physical and mentally. He looks at the hungry future for his family. Some take the easy way out and do suicide. Some leave agriculture all together and go to cities looking for jobs. Surveys time and again say that most farmers don't want their children to continue in farming. &nbsp;The generation now sees agriculture as lowly job and don't see this as career. Who will take the mantle forward? No one. What will people eat in the future? May be capsules or chemicals which will just simulate food.<div>
+                        &nbsp; &nbsp; &nbsp; The fertility of the land has gone down. Punjab is an example. Agriculture nowadays requires more fertilizers, more pesticides, more water, special seeds. Buy them or lose your crop. Farmer is crippled from the start. He starts with debt and ends with debt. &nbsp; &nbsp; &nbsp;</div>
+                        </div>
+                        <div>
+                        &nbsp; &nbsp; &nbsp; With the government more worried about foreign investors not investing, there is no time for the people at the bottom of the pyramid. They can die. They can live. If they want, they can change this government in next election. Till then, just bear the pain. MGNREGA is also diluted by government as they say its inefficient. So, nothing to fall back on.</div>
+                        <div>
+                        &nbsp; &nbsp; &nbsp; In Capitalism, the businesses which fail are allowed to fail. Government don't intervene. In India, this principle is applied strictly to agriculture. If there are heavy rains or no rains and the crops fail, agriculture is not helped and allowed to fail unless its the election season. Something needs to be done about the agriculture crisis or the future will be bad and will have starvation all around.</div><br/>
+                        <a href="#" class="btn btn-link p-0 mt-auto">Read more</a>
+                        </div>
+                    </article>
+                    <article class="blog-post">
+                        <h2>Major Changes in Internet Usage and its Impact</h2>
+                        <p >Saturday, May 2, 2015</p>
+                        <div style="text-align: left; font-size: 20px">
+                        <span style="line-height: 24px;"><span style="font-family: Helvetica, Arial, sans-serif;">&nbsp; &nbsp; </span><span style="font-family: inherit;">&nbsp;The swing towards mobile internet has opened up new opportunities on one hand and made redundant a number of traditional ways of accessing internet less attractive. With explosion of smartphone users, the internet access patterns are changing and with it the ways companies reach out to customers.</span></span><br>
+                        <span style="font-family: inherit; line-height: 24px;">&nbsp; &nbsp; &nbsp;The first reaction to this change came from Google when it started giving different search results for Mobiles and Desktop forcing everyone to have responsive pages. Companies scrambled to remain relevant in Google search results.</span><br>
+                        <span style="font-family: inherit; line-height: 24px;">&nbsp; &nbsp; &nbsp;The second change is the attention span of customers. We thought TV was reducing the attention span of people to less than 15 seconds. Try mobile. If you have to grab customer's attention, you have only 5 seconds on mobile or customer moves on to other sites. That too in smaller screen.</span><br>
+                        <span style="font-family: inherit; line-height: 24px;">&nbsp; &nbsp; &nbsp;The third and important change is the technology. With this change in access patterns, the spends on desktop technologies are less attractive. So, companies are rethinking their strategies of whether to spend on desktop or not. (See Flipkart's announcement of doing away with their website in one year.)</span><br>
+                        <span style="font-family: inherit; line-height: 24px;">&nbsp; &nbsp; &nbsp;The competition to telecom operators from Over the Top(OTT) operators is tremendous. The tragedy is these OTT services are eating into the actual revenue sources of the telecom providers. The users doesn't want to pay for it. But the end result will be telecom providers will go into losses and they will shut down.</span><br>
+                        <span style="font-family: inherit; line-height: 24px;">&nbsp; &nbsp; &nbsp;Internet is reachable to larger populations. Small Businesses now are trying to get good reviews from customers which bring them new business.The business models are changing. "Word of mouth" now is becoming "Word of Mobile".</span><br>
+                        <span style="font-family: inherit; line-height: 24px;">&nbsp; &nbsp; &nbsp;CEOs are more vocal about their plans, more interactive. Customers are becoming more demanding. They want value for money. They are comparing, they are reviewing, they are sharing thoughts, they are changing the face of business. So much so that the businesses have to change and change fast to catch up. What is good today is outdated in a week when the competitor launches new product. Businesses need to make customizable products where the product can be tweaked to look different and new even if you don't change the product too much.</span><br>
+                        <span style="font-family: inherit; line-height: 24px;">&nbsp; &nbsp; &nbsp;The end result is mobile internet is changing every facet of our life and this is just the beginning.</span><br/>
+                        <a href="#" class="btn btn-link p-0 mt-auto">Read more</a>
+                        </div>
+                    </article>
+                    <article class="blog-post">
+                        <h2>Are Hydro Power Projects Increasing the risk of Earthquakes?</h2>
+                        <p >Saturday, May 2, 2015</p>
+                        <div style="text-align: left; font-size: 20px">
+                        The big rivers of India start in Himalayas and thus they are at its highest force there. So, it makes sense to have hydro power projects there. But new evidence is appearing which is linking the increase of occurrence of earthquakes to these hydro power projects.<br>
+                        The mountains in Himalayas are made from thin soil and they are held together by trees. For construction of these projects, the trees are cut. So, the force holding together is lost. Next comes the weight of the water.<br>
+                        These projects store huge amount of water in one place. Himalayas are one of the most earthquake sensitive areas in Indian subcontinent. So, if the dam is in earthquake sensitive area, then the tremendous pressure of the water stored in the dam induces pressure resulting in earthquakes.<br>
+                        <br>
+                        China is facing these problems and research done points to a possible link between a hydro power project and earthquake in an area.<br>
+                        http://topics.nytimes.com/top/news/science/topics/earthquakes/sichuan_province_china/index.html<br>
+                        <br>
+                        Hydro Power looks to be more cleaner alternative to other power generation methods. But in the long run, we will have to check if the risks outweigh the gains.<br/>
+                        <a href="#" class="btn btn-link p-0 mt-auto">Read more</a>
+                        </div>
+                    </article>
+                    <article class="blog-post">
+                        <h2>Obama's Dilemma - To save the rest of the world or to save his own country</h2>
+                        <p >Wednesday, October 15, 2014</p>
+                        <div style="text-align: left; font-size: 20px">
+                        &nbsp; &nbsp; With the reluctance of America to directly join the fight with Islamic State(IS), Obama's leadership is being questioned. He is said to be a reluctant interventionist. His leadership is stated to be weak and he is being shown is the one who is taking down America on a weak path.<br>
+                        <br>
+                        &nbsp; &nbsp; But the most important question to ask is whether America has the resources and people's support to wage wars thousands of miles away from their homes.<br>
+                        <br>
+                        &nbsp; &nbsp; First because of the recession in 2008, financial resource crunch is very real. People in America are without jobs or are in jobs which get paid less. These people are struggling to make their lives work. Healthcare has become difficult to come by as they have less money to contribute to insurance. Schools for children has less funding. Youth who want to goto college has little support in terms of loans as the present graduates are finding to hard to get work. Everyone is unhappy that the manufacturing and other jobs which would generate more employment is moving out to developing countries (price differential in production) and they are just the consumers and not producers. Families have very little to fall back on. They are fighting everyday wars to pay bills. Retirements are getting stretched as many lost their savings in the Recession. Old people have no medical insurance.<br>
+                        <br>
+                        &nbsp; &nbsp; In all the whole of American society is suffering. In this scenario, if Obama has to take a decision to put money for his own people so that they have better shot at the future, he is right to do it. Because if the people of America are not happy, how will they be able to help anybody else.<br>
+                        <br>
+                        &nbsp; &nbsp; Second, with America involved in a number of wars thousands of miles away in the last two decades, (Afghanistan, Iraq, Libya, Syria etc), the soldier causalities is forcing the public to rethink sending their family member to fight those wars. They want them home so that they are sure that they will be alive.<br>
+                        <br>
+                        &nbsp; &nbsp; With these reasons, there is one philosophical reason as well. When you are weak, Lie Low. Recuperate and then assert yourself. This philosophy has been followed by China to the maximum as they lied low to fifty years. Now, they are superpower and can assert without any hesitation.<br>
+                        <br>
+                        &nbsp; &nbsp;So, if Obama takes a decision to first save his own people knowing very well that his leadership is questioned, he would be right. Because "First put your house in order before pointing to your neighbour's disordered house."<br/>
+                        <a href="#" class="btn btn-link p-0 mt-auto">Read more</a>
+                        </div>
+                    </article>
+                    
+                </div>
+                <a href="#" class="btn btn-link mt-3">More posts</a>
+            </div>
+            <div class="col-lg-3 blog-sidebar">
+                <h3>Blog Archive</h3>
+                <ul id="blogArchive" class="list-unstyled">
+                    <!-- Archive content will be dynamically populated here -->
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <footer class="text-center py-3 mt-4">
+        <p>&copy; 2024. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Sample blog archive data
+        const archiveData = [
+            { year: 2023, months: [
+                { name: 'June', count: 3 },
+                { name: 'May', count: 2 },
+                { name: 'April', count: 1 }
+            ]},
+            { year: 2022, months: [
+                { name: 'December', count: 2 },
+                { name: 'November', count: 3 },
+                { name: 'October', count: 1 }
+            ]},
+            { year: 2021, months: [
+                { name: 'December', count: 1 },
+                { name: 'November', count: 2 }
+            ]}
+        ];
+
+        // Function to create the archive structure
+        function createArchive() {
+            const archiveElement = document.getElementById('blogArchive');
+            archiveData.forEach(yearData => {
+                const yearElement = document.createElement('li');
+                yearElement.className = 'archive-year';
+                yearElement.innerHTML = `${yearData.year} (${yearData.months.reduce((sum, month) => sum + month.count, 0)})`;
+                
+                const monthsList = document.createElement('ul');
+                monthsList.className = 'archive-months';
+                yearData.months.forEach(month => {
+                    const monthElement = document.createElement('li');
+                    monthElement.innerHTML = `<a href="#">${month.name} (${month.count})</a>`;
+                    monthsList.appendChild(monthElement);
+                });
+
+                yearElement.appendChild(monthsList);
+                archiveElement.appendChild(yearElement);
+
+                yearElement.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    this.querySelector('.archive-months').style.display = 
+                        this.querySelector('.archive-months').style.display === 'none' ? 'block' : 'none';
+                });
+            });
+        }
+
+        // Call the function when the DOM is fully loaded
+        document.addEventListener('DOMContentLoaded', createArchive);
+    </script>
+</body>
+</html>
